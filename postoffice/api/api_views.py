@@ -10,7 +10,7 @@ class LetterViewSet(viewsets.ModelViewSet):
     """ Letters ViewSet """
     queryset = Letters.objects.all()
     serializer_class = LetterSerializer
-    http_method_names = ['get', 'post']
+    http_method_names = ['get', 'post', 'put']
     pagination_class = Paginator
     filter_backends = [filters.OrderingFilter, DjangoFilterBackend]
     ordering_fields = ['letter_type', 'letter_weight']
